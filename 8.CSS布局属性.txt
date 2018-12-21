@@ -1,0 +1,138 @@
+
+一、盒模型
+		CSS盒模型本质上是一个盒子，它用来封装视觉组件，
+		包括外边距（Margin）、边框（Border）、内边距（Padding）和内容（Content）四个属性
+			Margin:	边框外的区域，外边距是透明的
+			Border: 围绕在内边距和内容外的部分
+			Padding: 也叫填充属性，是指内容周围的区域，内边距也是透明的
+			Content: 盒子的实际内容，用于展示页面组件
+二、显示方式与可见性
+		CSS用display属性设置元素的显示方式，也
+		就是规定元素应该生成的框的类型
+			下面的例子使元素对象生成一个行内框：
+				p.inline{
+					display:inline;
+				}
+		display属性可设置的值:
+			none：此元素不会被显示
+			block: 此元素将显示为块级元素，此元素前后会带有换行符
+			inline: 默认。此元素会被显示为内联元素，元素前后没有换行符
+			inline-block: 行内块元素
+			list-item: 此元素会作为列表显示
+			run-in：此元素会根据上下文作为块级元素或内联元素显示
+			flex: 此元素应用flex布局方式显示
+		display和visibility属性都可以用于指定元素是可见还是隐藏
+			display: none隐藏某个元素的同时会释放元素占用的页面空间
+			visibility: hidden隐藏某个元素时，元素占用空间不会被隐藏
+三、position定位
+		position属性可设置：
+			absolute: 生成绝对定位的元素，相对于static定位以外的第一个父元素进行定位。
+					  元素的位置通过“left”、"top"、"right"及"bottom"属性来定义
+			fixed: 生成绝对定位的元素，相对于设备显示窗口进行定位。
+				   元素的位置通过"left"、“top”、"right"及“bottom”属性来定义
+			relative: 生成绝对定位的元素，相对于其正常位置进行定位。
+					  因此，“left:10rpx”会向元素的LEFT位置添加10rpx像素
+			static: 默认值。没有定位，忽略样式表中top、bottom、left、right等属性值对定位的影响
+		CSS其他用于定位的属性：
+			bottom:
+				{
+					描述：定义了定位元素下外边距边界与其包含下边界之间的偏移
+					可选值：auto、length、%
+				}
+			top:
+				{
+					描述：定义了一个定位元素上外边距边界与其包含上边界之间的偏移
+					可选值：auto、length、%
+				}
+			clip:
+				{
+					描述：剪辑一个绝对定位元素
+					可选值：shap、auto
+				}
+			left:
+				{
+					描述：定义了定位元素左外边距边界与其包含块左边界之间的偏移
+					可选值：auto、length、%
+				}
+			right:
+				{
+					描述：定义了定位元素右外边距边界与其包含右边界之间的偏移
+					可选值：auto、length、%
+				}
+			overflow:
+				{
+					描述：设置当元素的内容溢出其区域时发生的事情
+					可选值：auto、hidden、scroll、visible
+				}
+			overflow-y:
+				{
+					描述：指定如何处理顶部/底部边缘内容溢出元素的内容区域
+					可选值：auto、hidden、scroll、visible、no-display、no-content
+				}
+			overflow-x:
+				{
+					描述：指定如何处理右边/左边边缘内容溢出元素的内容区域
+					可选值：auto、hidden、scroll、visible、no-display、no-content
+				}
+四、float浮动属性
+		float属性用于图像浮动的设置
+		浮动属性可选择的值：
+			left:元素向左浮动
+			right:元素向右浮动
+			none:默认值。元素不浮动，并会显示其在文本中出现的位置
+五、边框
+		边框样式(border-style):指定要显示什么样的边界
+			none: 默认无边框
+			dotted: dotted定义一个点线框
+			dashed: 定义一个虚线框
+			solid: 定义实现边界
+			double: 定义两个边界，两个边界的宽度和border-width的值相同
+			groove：定义3D沟塘边界。效果取决于边界的颜色值
+			ridge: 定义3D脊边界。效果取决于边界的颜色值
+			inset: 定义一个3D的嵌入边框。效果取决于边界的颜色值
+			outset: 定义一个3D突出边框。效果取决于边界的颜色值
+		边框宽度：
+			border-width:为边框定义宽度，可以为边框指定长度像素值，如1rpx或者2px
+						 也可以用长度关键字设置，如设定值为thick、medium和thin
+		边框颜色：
+			border-color：用来设置边框颜色   
+				一次可以接受最多四个颜色值，分别定义为上、左、下、右边框的颜色
+				注意：必须先使用border-style设置边框样式，边框颜色属性才能起作用
+六、外边距和内边距
+		外边距：也称边距（Margin）
+		内边距：也称填充（Padding）
+		两者可以定义的值又auto、length长度（单位是rpx或px等）及百分比（%）
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

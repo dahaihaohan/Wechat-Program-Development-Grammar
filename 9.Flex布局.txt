@@ -1,0 +1,71 @@
+
+一、模型
+	Flex布局的元素，称为伸缩容器
+		伸缩容器存在两根轴：水平的主轴(main axis)和垂直的侧轴(cross axis)
+	主轴不一定是水平的，这取决于“justify-content”属性的值
+二、容器属性
+	主轴方向属性：
+		flex-direction:用来创建主轴，决定主轴的方向，也就是项目的排列方向
+		可选的值：
+			{
+				row:默认值，主轴为水平方向，从左向右;
+				row-reverse: 主轴从水平方向，从右向左
+				column:主轴为垂直方向，从上到下；
+				column-reverse: 主轴为垂直方向，从下到上。
+			}
+	换行属性：
+		flex-wrap:定义了项目是单行显示还是多行显示。类似记事本的“自动换行”
+		可选值：
+			nowrap: 默认值，不换行
+			wrap：换行。由上到下排列，项目的第一行在最上方
+			wrap-reverse: 换行，由下到上排列，项目的第一行在最下方
+	主轴对齐属性：
+		justify-content：用来定义项目沿着主轴线的对齐方式
+		可选值：
+			flex-start：默认值，左对齐
+			flex-end: 右对齐
+			center: 居中对齐
+			space-between: 两端对齐，项目间的间隔相等
+			space-around: 项目等距分布在行里。两端保留项目间距一半的空间
+	侧轴对齐属性：
+		align-item:定义项目在侧轴上的对齐方式。
+		可选值：
+			flex-start:上对齐
+			flex-end: 下对齐
+			center: 上下居中对齐
+			baseline: 项目第一行文字的基线对齐
+			stretch: 默认值，上线两侧对齐，将占满整个容器高度。
+	多行对齐属性：
+		align-content:定义了多行项目的对齐方式。
+		可选值：
+			flex-start: 与侧轴的起点对齐
+			flex-end：与侧轴的终点对齐
+			center: 与侧轴的中点对齐
+			space-between：与侧轴的两端对齐，行间隔平均分布
+			space-around: 各行在侧轴中平均分布，两端保留行间距一半的空间
+			stretch: 默认值，各行占满整个侧轴
+三、项目的属性
+	顺序属性：
+		order：定义了项目的排列顺序。数值小的排列在前面，order属性的默认值为0
+	放大比例属性:
+		flex-grow属性用来定义项目的伸缩放大比列，默认值为0
+	缩小比例属性：
+		flex-shrink:定义了项目的缩小比例，默认值为1。
+	伸缩基准属性：
+		flex-basis:定义在分配剩余空间前项目占据的主轴空间（main size）
+	单项对齐属性：
+		align-self:用来设置单个项目对齐方式，（继承容器的align-items属性）
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

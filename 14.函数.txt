@@ -1,0 +1,43 @@
+
+一、定义函数：
+	创建命名函数使用function命令
+		如：
+			function 函数名(参数列表){
+				。。。函数体语句块。。。
+			}
+二、定义匿名函数：
+	function(参数列表){
+		。。。函数体语句块。。。
+	}
+	使用：
+		var newFunc=function(userName){
+			console.log();
+		}
+三、用Function类创建匿名函数
+		是所有函数的父类
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

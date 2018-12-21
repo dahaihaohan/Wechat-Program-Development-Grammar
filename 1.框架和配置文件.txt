@@ -1,0 +1,83 @@
+一：小程序的目录结构
+
+	.js 是页面的逻辑文件，采用JavaScript语言框架
+	.json 是页面配置文件，遵守JSON语法
+	.wxml 是页面的结构文件，语法结构类似于xml,与html格式有比较大的差别
+	.wxss 是页面样式表文件，兼容css语法规范
+	
+二： json 小程序的配置文件
+	
+	全局配置文件： app.json
+	页面配置文件： （文件名）.json
+	
+	app.json :
+			
+		pages: 
+			指定小程序由哪些前端页面组成
+			如：
+				{
+					"pages":[
+						"pages/log/log",
+						"pages/time/time"
+					]
+				}
+			
+		window:
+			用来设置小程序的状态栏、标题、导航条和窗口背景颜色等窗口表现内容
+			navigationBarBackgroundColor 用来定义导航栏的背景颜色，从#000000到#FFFFFF
+			navigationBarTextStyle 		 用来定义导航栏标题文字颜色，只支持“black”和“white”
+			navigationBarTitleText		 用来设置导航栏标题文字内容
+			backgroundColor 			 用来定义窗口的背景色，从#000000到#FFFFFF
+			backgroundTextStyle 		 用来定义下拉背景字体和loading图的样式，仅支持dark/light
+			enablePullDownRefresh		 是否开启下拉刷新，值为“true”开启，“false”禁止开启
+			
+		tabBar:
+			配置公共导航栏
+				注意：
+					小程序的导航栏只支持设置2到5个导航按钮
+				selectedColor和color: 用于设置导航栏文字的默认颜色和被选中时表现的颜色
+				backgroundColor: 用来设置导航栏的背景颜色
+				borderStyle: 用来设置导航栏的上边框颜色，只支持black和white两种
+				position: 用来设置导航栏在页面的位置，在顶部或者底部，分别用数值top和bottom
+				list: 用来配置导航栏导航按钮，它的格式是数组，每一个数组定义一个按钮的配置
+						{
+							pagePath: 用来设置导航按钮被单击时跳转到的页面路径
+							text:	用来定义按钮的文字
+							iconPath:用来定义默认按钮图片的路径
+									{
+										selectedIconPath: 用来定义按钮被选中时显示的图片路径
+												注意： 导航栏按钮icon图片的大小不能超过40kb,
+													   只有底部显示的导航栏可以显示设置的按钮图片，
+													   顶部导航栏设置这个参数无效，图片不会被显示出来
+									}
+						}
+						
+		networkTimeout:通信超时事件配置
+			用来设置小程序在网络通信时的超时时间，单位时毫秒。
+			request: 用来设置wx.request的超时时间，单位是毫秒
+			connectSocket: 用来配置wx.connectSocket的超时时间，是小程序用来创建WebSocket链接的函数
+			uploadFile: 用来配置wx.uploadFile的超时时间，是用来将本地资源上传到小程序后台服务的函数
+			downloadFile: 用来配置wx.downloadFile的超时时间，是小程序用来下载文件资源到本地的函数
+			
+		debug: 调试模式配置
+			开启小程序开发工具debug模式
+			开启后，在开发者工具的Console控制台面板，调试信息会以info的形式陈列出来
+		
+		
+		
+	（文件名）.json: 页面配置不会涉及公共导航栏、通信超时事件等属性。
+			只需设置window配置项的内容，加载页面时，page.json 的window配置项会覆盖app.json 中相同配置项的内容。
+			
+		
+		
+		
+		
+		
+		
+		
+		
+			
+			
+			
+			
+			

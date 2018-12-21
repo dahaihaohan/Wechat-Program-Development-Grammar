@@ -1,0 +1,47 @@
+
+一、JSON的语法结构
+		JSON由两种表示结构，分别用于对象的操作和数组的操作
+			
+		对象结构的JSON语句块：
+			由“key/value”构成
+			如：
+				{
+					key1:value1,key2:value2,....
+				}
+		JSON的数组结构以方括号开始和结束，中间由花括号括起来的元素组合组成
+			如：
+				[
+					{
+						key1:value1,key2:value2,
+					},
+					{
+						key3:value3,key4:value4
+					}
+				]
+二、使用JSON
+		读写JSON对象由两种方法，分别是利用点号（.）操作符和“[key]”的方式
+		从JSON删除count这条数据：
+			function Delete(){
+				delete obj.count;
+			}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				

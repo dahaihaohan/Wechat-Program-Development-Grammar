@@ -1,0 +1,59 @@
+
+一、类和对象
+	面向对象的编程方法具有四个基本特征：
+		1.抽象。2.继承。3.封装。4.多态性
+	
+	JavaScript是基于对象的脚本语言，它提供了丰富的内置“类”，包括：
+		String: 字符串类
+		Number: 数值类
+		Date: 日期类
+		Math: 数学类，包含大量的有关数学运算的方法
+		Object: 对象类
+		Function: 函数类
+		Array: 数组类
+		Error: 错误类
+二、直接创建Object类的对象实例
+		var myObject=new Object();//直接用Object创建对象关键字创造一个空白对象
+		空对象不包含任何属性和方法，JavaScript是一种动态语言，可以随时动态的为对象添加属性和方法：
+			如：
+				myObject.name="老王";
+				myObject.age=25;
+			这样就有了两个属性：name和age
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

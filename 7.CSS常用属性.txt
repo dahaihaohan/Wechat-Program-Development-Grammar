@@ -1,0 +1,50 @@
+
+一、尺寸属性
+		height: 设置元素高度
+		width: 设置元素宽度
+		line-height: 设置行高
+		max-height: 设置元素最大高度
+		max-width: 设置元素最大高度
+		min-height: 设置元素最小高度
+		min-width: 设置元素最小高度
+		auto: 默认值，窗口自动计算数值
+		length: 使用rpx、px、rem等单位定义数值
+		x%: 百分比，定义基于父元素的百分比数值
+二、背景属性
+		background-color:定义组件或标签元素的背景颜色
+		background-image:用于描述元素的背景图像，
+						 如果不设置，背景图像将平铺重复显示，以覆盖整个元素
+三、文本格式
+		color:用来设置文本颜色
+		text-align: 用来设置文本的水平对齐方式
+					（居中[center],对齐到左[left]或右[right],两端对齐[justify]）
+		text-transform:可以用来定义文本中的字符都变成大写（uppercase）或小写（lowercase）
+					   也可以定义每个单词只有首字母大写（capitalize）
+		text-indent:用来定义文本第一行的缩进像素：
+四、字体属性
+		font-family：设置文本字体系列，通常应该设置几个字体名称作为备用
+			如：font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+		font-size: 设置文本的大小
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 
+						 

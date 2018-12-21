@@ -1,0 +1,148 @@
+
+一、小程序的初始化： 
+		
+	app.js:
+			小程序的注册和初始化是通过App() 函数进行的，App()注册小程序时接受一个object参数，指定小程序的生命周期
+			
+			object参数说明：
+				onLaunch: {
+							类型：Function
+							描述：监听小程序初始化
+							触发事件： 当小程序初始化完成时，会触发onLaunch(全局只出发一次)
+						  }
+				
+				onShow: {
+							类型：Function
+							描述：监听小程序显示
+							触发事件： 当小程序启动，或从后台进入前台显示，会触发onShow
+						}
+						
+				onHide: {
+							类型：Function
+							描述：监听小程序隐藏
+							触发事件： 当小程序从前台进入后台，会触发onHide
+						}
+						
+				其他：{
+							类型：Any
+							描述：开发者可以添加任意的函数或数据到Object参数中，用this可以访问
+					  }
+			
+			小程序提供了一个全局的getApp()函数，可以获取小程序实例 
+			如：在index.js中
+				{
+					var appInfornation=getApp();
+				}
+			注意：App(),必须且只能在根目录的app.js文件中注册，而且只能注册一个
+
+二、页面的注册：
+
+	(文件名).js:
+			页面注册中需要用Page()函数注册这个页面。
+			初始化数据是对于这个页面的第一次渲染
+			object参数说明： 
+					data: 必须是以JSON语法支持的格式
+						    {
+								类型：Object
+								描述：页面的初始化数据
+					        }
+					onLoad: 
+							{
+								类型：Function
+								描述：监听页面加载
+								触发事件：只在页面加载时调用一次，接受页面参数可以获取到wx.navigateTo
+										  和wx.redirectTo事件及<navigator/>中的query事件
+							}
+					onReady: 
+							{
+								类型：Function
+								描述：监听页面初次渲染完成
+								触发事件：在页面初次渲染完成时调用，每一个页面只会调用一次
+										  对界面的设置如wx.setNavigationBarTitle函数等可以在onReady之后设置
+							}
+					onShow: 
+							{
+								类型：Function
+								描述：监听页面显示
+								触发事件：每次打开页面都会调用一次
+							}
+					onHide: 
+							{
+								类型：Function
+								描述：监听页面隐藏
+								触发事件：在页面隐藏时调用，即当页面进行navigateTo页面导航
+										  或用户通过操作底部导航按钮切换到其他页面时调用
+							}
+					onUnload: 
+							{
+								类型：Function
+								描述：监听页面卸载
+								触发事件：在页面卸载时调用，即当页面执行redirectTo或navigateBack操作时调用
+							}
+					onPullDownRefresh: 
+							{
+								类型：Function
+								描述：页面相关事件处理函数-监听用户下拉动作
+								前提： 事先要在app.json的window配置中开启enablePullDownRefresh选项。
+										处理完刷新事件后，可以用wx.stopPullDownRefresh()函数停止页面的下拉刷新
+				 		    }
+					onReachBottom:  
+							{
+								类型：Function
+								描述：页面上拉触底事件的处理函数
+							}
+					其他：  {
+								类型：Any
+								描述：开发者可以添加任意的函数或数据到Object参数中，用this可以访问
+							}
+							
+	getCurrentPages()函数用来获取当前页面栈的实例
+	
+三、页面的路由：
+		指从一个页面跳转到另一个页面的过程。
+		
+		路由方式： 
+				初始化：
+						{
+							触发事件: 小程序打开的第一个页面
+							路由后页面：onLoad,onShow
+							路由前页面：无
+						}
+				打开新页面：
+						{
+							触发事件: 调用APIwx.navigateTo或使用组件<navigator/>
+							路由后页面：onLoad,onShow
+							路由前页面：onHide
+						}
+				页面重定向：
+						{
+							触发事件: 调用APIwx.redirectTo或使用组件<navigator/>
+							路由后页面：onLoad,onShow
+							路由前页面：onUnload
+						}
+				页面返回：
+						{
+							触发事件: 调用APIwx.navigateBack或用户按左上角返回按钮
+							路由后页面：onShow
+							路由前页面：onUnload(多层页面返回每个页面都会按顺序触发onUnload)
+						}
+				Tab切换：
+						{
+							触发事件: 多Tab模式下用户切换Tab
+							路由后页面：第一次打开onLoad,onShow;否则onShow
+							路由前页面：onHide
+						}
+四、逻辑层的模块化
+		为了提高代码的可读性和提高代码的效率
+		小程序的JavaScript代码模块只能通过module.exports和exports方法对外暴露接口
+		
+		在其他页面引用时使用require()方法将以上公共代码导入
+		如 var modular = require('modular.js');
+
+
+
+
+
+
+
+			

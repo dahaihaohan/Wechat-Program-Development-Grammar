@@ -1,0 +1,54 @@
+
+一、ES6常用语法详解
+	let变量声明语句：局部变量，作用域只在let语句所在的语句块内
+	const常量声明语句：用来声明常量
+二、类操作语句
+		用关键词class定义类：
+			如：
+				class humen{
+					constructor(){
+						this.type='humen';
+					}
+					goto(posi){
+					}
+				}
+	子类调用this方法时需要注意，必须在constructor方法中先调用super方法。
+	所以必须先调用super方法创建父类的this实例对象，否则子类就找不到自己的this对象。
+三、arrow function箭头函数
+		ES5的语法：
+			function(value){
+				return value*20;
+			}
+		ES6:
+			(value)=>value*20
+	复杂的语句需要用花括号（{}）把代码包裹起来：
+		function(num,price){
+			num=num+5;
+			price=price*2;
+			return num*price;
+		}
+		(num,price)=>{num=num+5;price=price*2;return num*price;};
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
