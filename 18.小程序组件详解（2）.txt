@@ -1,0 +1,76 @@
+
+表单组件：
+		button:
+			size:
+				{
+					类型：String
+					默认值：default
+					说明：有效值default、mini 
+				}
+			type:
+				{
+					类型：String
+					默认值：default
+					说明：按钮的样式类型，有效值primary、default、warn
+				}
+			plain:
+				{
+					类型：Boolean
+					默认值：false
+					说明：按钮是否缕空,背景色透明
+				}
+			disabled:
+				{
+					类型：Boolean
+					默认值：false
+					说明：是否禁用
+				}
+			loading:
+				{
+					类型：Boolean
+					默认值：false
+					说明：名称前是否带loading图标
+				}
+			form-type:
+				{
+					类型：String
+					默认值：无
+					说明：有效值：submit、reset，用于<form/>组件，单机分别会触发submit/reset事件
+				}
+			hover-class:
+				{
+					类型：String
+					默认值：button-hover
+					说明：指定按钮按下去的样式类。当hover-class="none"时，没有单击态效果
+				}
+			注意：button-hover默认为{background-color:rgba(0,0,0,0.1);opacity:0.7;}
+		checkbox-group:
+			多项选择器
+			bindchange: 
+				{
+					类型：EventHandle
+					说明：<>
+				}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
