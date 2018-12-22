@@ -12,6 +12,15 @@
 		Function: 函数类
 		Array: 数组类
 		Error: 错误类
+		setInterval:定时器
+			{
+				setInterval ( code, milliseconds[, args...] );
+				参数			描述
+				code			需要执行的函数或js代码
+				milliseconds	执行函数或代码的间隔时间，单位为毫秒
+				args			可选参数用于给被调用的函数传递参数，参数可以有多个
+			}
+		clearInterval:清除定时器
 二、直接创建Object类的对象实例
 		var myObject=new Object();//直接用Object创建对象关键字创造一个空白对象
 		空对象不包含任何属性和方法，JavaScript是一种动态语言，可以随时动态的为对象添加属性和方法：
